@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane fx:controller="control.ProductoController"
+          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10" style="-fx-padding: 20;">
+
+    <TableView fx:id="tabla" GridPane.rowIndex="0" GridPane.columnIndex="0" GridPane.rowSpan="3" prefHeight="450">
+        <columns>
+            <TableColumn fx:id="colNombre" text="Nombre" prefWidth="250"/>
+            <TableColumn fx:id="colPrecio" text="Precio" prefWidth="120"/>
+            <TableColumn fx:id="colStock" text="Stock" prefWidth="80"/>
+        </columns>
+    </TableView>
+
+    <Label text="Carrito" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+    <ListView fx:id="carrito" GridPane.rowIndex="1" GridPane.columnIndex="1" prefHeight="350"/>
+
+    <Label text="Cant:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+    <TextField fx:id="txtCant" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+
+    <Button text="Agregar" onAction="#agregarAlCarrito" GridPane.rowIndex="2" GridPane.columnIndex="0" GridPane.halignment="RIGHT"/>
+    <Button text="Confirmar compra" onAction="#confirmarCompra" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+</GridPane>
